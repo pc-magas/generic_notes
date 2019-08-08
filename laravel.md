@@ -55,7 +55,7 @@ Then follow the seeding procedure.
 2. Getting database-only config:
    ```
     $config=config();
-    $config->database;
+    $config->get('database');
    ```
 
 3. Running factories:
@@ -185,17 +185,17 @@ Assuming that you have created a folder named `./migrations/tests`. In that fold
 
 - You create a migraction with the command:
   ```
-  php artisan make:migration --path **'./migrations/tests'** ^migration_name^ --table=^table_name^
+  php artisan make:migration --path './migrations/tests' ^migration_name^ --table=^table_name^
   ```
 
 - On development you can use the command to rerun the tests:
   ```
-  php artisan migration:refresh --path **'./migrations/tests'**
+  php artisan migration:refresh --path './migrations/tests'
   ```
 
 - And you can run the migration as:
   ```
-  php artisan migrate --path **'./migrations/tests'**
+  php artisan migrate --path './migrations/tests'
   ```
 
 ## Make test-only database migrations only for setting up a testing database
